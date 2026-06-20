@@ -1,0 +1,34 @@
+# FinanceManager Data File - Saved: 2026-06-18 11:22:16
+# Version: 1.0
+# ---TREE---
+THU,THU,0
+THU/Lương,THU,0
+THU/Thưởng,THU,0
+THU/Lãi tiết kiệm,THU,0
+THU/Thu nhập khác,THU,0
+THU/BET88,THU,0
+CHI,CHI,0
+CHI/Tiền nhà,CHI,0
+CHI/Điện nước,CHI,0
+CHI/Điện nước/Điện,CHI,20000000
+CHI/Điện nước/Nước,CHI,0
+CHI/Ăn uống,CHI,0
+CHI/Đi lại,CHI,0
+CHI/Mua sắm,CHI,0
+CHI/Giải trí,CHI,0
+CHI/Sức khỏe,CHI,0
+CHI/PC,CHI,0
+---TRANSACTIONS---
+2026-06-03,20000000.00,THU/Lương,
+2026-06-03,5000000.00,THU/Thưởng,
+2026-06-03,1000000.00,THU/Lãi tiết kiệm,
+2026-06-03,7000000.00,CHI/Tiền nhà,
+2026-06-03,1000000.00,CHI/Điện nước/Điện,
+2026-06-03,300000.00,CHI/Điện nước/Nước,
+2026-06-03,4000000.00,CHI/Ăn uống,
+2026-06-03,500000.00,CHI/Đi lại,
+2026-06-03,200000.00,CHI/Sức khỏe,
+2026-06-03,1000000.00,CHI/Giải trí,
+2026-06-03,3000000.00,THU/Thu nhập khác,edit video
+2026-06-17,200000.00,CHI/Ăn uống,tôm hùm
+2026-06-18,20000000.00,CHI/Mua sắm,rolex

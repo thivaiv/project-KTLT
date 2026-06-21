@@ -6,6 +6,7 @@ import models.CategoryNode;
 import models.Transaction;
 
 public class FinanceTree {
+    //mã ANSI tạo màu
     public static final String RESET = "\u001B[0m";
     public static final String RED = "\u001B[31m";
     public static final String YELLOW = "\u001B[33m";
@@ -65,6 +66,7 @@ public class FinanceTree {
 
     public void unregisterSubtree(CategoryNode node) {
         String path = node.getPath();
+        // Đệ quy để xóa toàn bộ mục con trong hashmap
         nodeMap.remove(path);
         for (CategoryNode child : node.getChildren()) {
             unregisterSubtree(child);
@@ -305,6 +307,9 @@ public class FinanceTree {
             else {
                 info = String.format(DOLLAR+ "[%,.0f]" +RESET, (total>0)?total:0);
             }
+        }
+        if (node.getCategoryType()=="ROOT"){
+            info = "";
         }
 
         sb.append(prefix.toString()).append(indent > 0 ? "└── " : "").append("📁 ").append(node.getName()).append("  ").append(info).append(outBudget).append("\n");

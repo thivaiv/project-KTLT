@@ -1,4 +1,4 @@
-# FinanceManager Data File - Saved: 2026-06-19 23:56:05
+# FinanceManager Data File - Saved: 2026-06-19 23:57:30
 # Version: 1.0
 # ---TREE---
 THU,THU,0
@@ -16,7 +16,7 @@ CHI/Ăn uống,CHI,0
 CHI/Đi lại,CHI,0
 CHI/Mua sắm,CHI,1000000
 CHI/Giải trí,CHI,0
-CHI/Sức khỏe,CHI,0
+CHI/Sức khỏe,CHI,500000
 CHI/PC,CHI,100000000
 ---TRANSACTIONS---
 2026-06-03,20000000.00,THU/Lương,

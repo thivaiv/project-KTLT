@@ -1,9 +1,5 @@
-package ui;
-
 import core.FinanceManager;
-import core.FinanceTree;
 import models.CategoryNode;
-import models.Transaction;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -65,7 +61,7 @@ public class ConsoleMenu {
 
     private void printMainMenu() {
         System.out.println("\n╔══════════════════════════════════════════════════════════╗");
-        System.out.println("║         HỆ THỐNG QUẢN LÝ TÀI CHÍNH CÁ NHÂN (SV3)         ║");
+        System.out.println("║           HỆ THỐNG QUẢN LÝ TÀI CHÍNH CÁ NHÂN             ║");
         System.out.println("╠══════════════════════════════════════════════════════════╣");
         System.out.println("║  1. 📁 Quản lý Danh mục (Thêm / Xóa / Đổi tên)           ║");
         System.out.println("║  2. 📝 Nhập liệu Giao dịch mới                           ║");
@@ -83,7 +79,7 @@ public class ConsoleMenu {
         boolean back = false;
         while (!back) {
             System.out.println("\n╔══════════════════════════════════════════════════════════╗");
-            System.out.println("║                  📁 QUẢN LÝ DANH MỤC                    ║");
+            System.out.println("║                   📁 QUẢN LÝ DANH MỤC                    ║");
             System.out.println("╠══════════════════════════════════════════════════════════╣");
             System.out.println("║  1.1 Xem cấu trúc cây danh mục hiện tại                  ║");
             System.out.println("║  1.2 Thêm danh mục mới                                   ║");

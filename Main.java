@@ -1,7 +1,5 @@
 
 import java.util.Scanner;
-import models.CategoryNode;
-import models.Transaction;
 
 public class Main {
 
@@ -19,8 +17,8 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("╔══════════════════════════════════════════════════════════╗");
-        System.out.println("║        HỆ THỐNG QUẢN LÝ TÀI CHÍNH CÁ NHÂN (JAVA)         ║");
-        System.out.println("║        Môn: Cấu trúc dữ liệu & Giải thuật                ║");
+        System.out.println("║           HỆ THỐNG QUẢN LÝ TÀI CHÍNH CÁ NHÂN             ║");
+        System.out.println("║               Báo cáo Kỹ thuật lập trình                 ║");
         System.out.println("╚══════════════════════════════════════════════════════════╝");
 
         System.out.println("  1. Mở Giao diện Hệ thống");
@@ -31,7 +29,7 @@ public class Main {
             choice = scanner.nextLine().trim();
         }
         if (choice.equals("1")) {
-            new ui.ConsoleMenu().run();
+            new ConsoleMenu().run();
         }
         if (choice.equals("2")) {
             System.out.println("  Tạm biệt!");

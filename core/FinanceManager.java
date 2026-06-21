@@ -338,8 +338,6 @@ public class FinanceManager {
 
                 if (!inTransactionsSection) {
                     // -- Xử lý cấu trúc cây --
-                    ///  Format: "Root/Chi tiêu/Ăn uống,Expense"
-                    ///        Đọc " Root/Cata/hạn mức"
                     try {
                         String[] parts = line.split(",");
                         if (parts.length >= 2) {
@@ -347,12 +345,10 @@ public class FinanceManager {
                             String catType = parts[1].trim();
                             double budget = 0.0;
 
-                            // Nếu file có chứa cột hạn mức (file mới)
                             if (parts.length >= 3) {
                                 try {
                                     budget = Double.parseDouble(parts[2].trim());
-                                } catch (NumberFormatException ignored) {
-                                }
+                                } catch (NumberFormatException ignored) {}
                             }
 
                             if (!path.equals("THU") && !path.equals("CHI") && !path.startsWith("THU/") && !path.startsWith("CHI/")) {
@@ -369,11 +365,10 @@ public class FinanceManager {
 
                                 CategoryNode createdNode = tree.insertNode(parentPath, nodeName, catType);
                                 if (createdNode != null) {
-                                    createdNode.setBudget(budget); // Gán hạn mức cho nút mới
+                                    createdNode.setBudget(budget);
                                     nodesCreated++;
                                 }
                             } else {
-                                // BỔ SUNG PHẦN NÀY: Nếu nút đã tồn tại (như nút CHI mặc định), nạp lại hạn mức từ file CSV
                                 existingNode.setBudget(budget);
                             }
                         } else {
@@ -384,55 +379,23 @@ public class FinanceManager {
                     }
 
                 } else {
-                    // -- Xử lý giao dịch --
+                    // Xử lý giao dịch
                     try {
-                        String[] parts = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", 4);
-                        if (parts.length < 4) {
-                            loadWarnings.add(String.format("Line %d: invalid columns count", lineNum));
-                            continue;
-                        }
+                        // fromCsvRow
+                        Transaction txn = Transaction.fromCsvRow(line);
+                        String categoryPath = txn.getCategoryPath();
 
-                        LocalDate date;
-                        try {
-                            date = LocalDate.parse(parts[0].trim(), java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-                        } catch (java.time.format.DateTimeParseException e) {
-                            loadWarnings.add(String.format("Line %d: invalid date format", lineNum));
-                            continue;
-                        }
-
-                        double amount;
-                        try {
-                            amount = Double.parseDouble(parts[1].trim());
-                        } catch (NumberFormatException e) {
-                            loadWarnings.add(String.format("Line %d: invalid amount format", lineNum));
-                            continue;
-                        }
-
-                        if (amount <= 0) {
-                            loadWarnings.add(String.format("Line %d: invalid amount <= 0", lineNum));
-                            continue;
-                        }
-
-                        String categoryPath = parts[2].trim();
+                        // Kiểm tra tính hợp lệ của đường dẫn danh mục
                         if (!categoryPath.contains("/")) {
                             loadWarnings.add(String.format("Line %d: invalid path", lineNum));
                             continue;
                         }
-
                         if (!categoryPath.startsWith("THU/") && !categoryPath.startsWith("CHI/")) {
                             loadWarnings.add(String.format("Line %d: invalid path prefix", lineNum));
                             continue;
                         }
 
-                        String noteField = parts[3].trim();
-                        String note = "";
-                        if (noteField.startsWith("\"") && noteField.endsWith("\"")) {
-                            note = noteField.substring(1, noteField.length() - 1).replace("\"\"", "\"");
-                        } else {
-                            note = noteField.replace(";", ",");
-                        }
-
-                        Transaction txn = new Transaction(amount, date, note, categoryPath);
+                        // Phân loại và thêm vào cây
                         boolean added = tree.classifyAndAddTransaction(txn, categoryPath);
                         if (added) {
                             txnsLoaded++;
@@ -440,6 +403,7 @@ public class FinanceManager {
                             loadWarnings.add(String.format("Line %d: could not classify transaction into '%s'", lineNum, categoryPath));
                         }
                     } catch (Exception e) {
+                        // bắt lỗi
                         loadWarnings.add(String.format("Lỗi dòng %d (giao dịch): %s", lineNum, e.getMessage()));
                     }
                 }

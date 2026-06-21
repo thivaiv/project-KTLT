@@ -31,19 +31,8 @@ public class Transaction {
         idCounter = 0;
     }
 
-    public static void setCounter(int value) {
-        idCounter = value;
-    }
-
     public int getTransactionId() {
         return transactionId;
-    }
-
-    public void setTransactionId(int id) {
-        this.transactionId = id;
-        if (id > idCounter) {
-            idCounter = id;
-        }
     }
 
     public double getAmount() {
@@ -75,12 +64,16 @@ public class Transaction {
                 note);
     }
 
+
+    //==
+    //XỬ lý dòng cho load và save
+    //==
     public String toCsvRow() {
         String safeNote = note;
         if (safeNote.contains(",")) {
             safeNote = "\"" + safeNote.replace("\"", "\"\"") + "\"";
         }
-        // Format SV1: YYYY-MM-DD,amount,CategoryPath,note
+        // format : YYYY-MM-DD,amount,CategoryPath,note
         return String.format(java.util.Locale.US, "%s,%.2f,%s,%s",
                 date.format(formatter),
                 amount,
@@ -89,7 +82,7 @@ public class Transaction {
     }
 
     public static Transaction fromCsvRow(String row) {
-        // Format SV1: YYYY-MM-DD,amount,CategoryPath,note
+        // format : YYYY-MM-DD,amount,CategoryPath,note
         String[] parts = row.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", 4);
         if (parts.length < 3) {
             throw new IllegalArgumentException("Dòng CSV không hợp lệ (cần ít nhất 3 cột): '" + row + "'");
@@ -98,7 +91,7 @@ public class Transaction {
         LocalDate date = LocalDate.parse(parts[0].trim(), formatter);
         double amount = Double.parseDouble(parts[1].trim());
         String categoryPath = parts[2].trim();
-        
+
         String note = "";
         if (parts.length > 3) {
             String noteField = parts[3].trim();

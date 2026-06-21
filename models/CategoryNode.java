@@ -15,10 +15,12 @@ public class CategoryNode {
 
     public CategoryNode(String name, String categoryType, CategoryNode parent) {
         if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException("Tên danh mục không được để trống.");
+            throw new IllegalArgumentException(
+                    "Tên danh mục không được để trống.");
         }
         if (!VALID_TYPES.contains(categoryType)) {
-            throw new IllegalArgumentException("Loại danh mục không hợp lệ: '" + categoryType + "'. Phải là một trong " + VALID_TYPES);
+            throw new IllegalArgumentException("Loại danh mục không hợp lệ: '"
+                    + categoryType + "'. Phải là một trong " + VALID_TYPES);
         }
 
         this.name = name.trim();

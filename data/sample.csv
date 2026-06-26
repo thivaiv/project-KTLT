@@ -1,0 +1,122 @@
+---TREE---
+path,type,budget
+THU,THU,0
+THU/Lương,THU,0
+THU/Thưởng,THU,0
+THU/Lãi tiết kiệm,THU,0
+THU/Thu nhập khác,THU,0
+THU/BET88,THU,0
+CHI,CHI,0
+CHI/Tiền nhà,CHI,5000000
+CHI/Điện nước,CHI,0
+CHI/Điện nước/Điện,CHI,2000000
+CHI/Điện nước/Nước,CHI,500000
+CHI/Ăn uống,CHI,3000000
+CHI/Đi lại,CHI,1500000
+CHI/Mua sắm,CHI,2000000
+CHI/Giải trí,CHI,1000000
+CHI/Sức khỏe,CHI,1000000
+CHI/PC,CHI,100000000
+
+---TRANSACTIONS---
+date,amount,path,note
+2026-05-19,1330000.00,CHI/PC,Ví điện tử
+2026-03-22,160000.00,CHI/Tiền nhà,Shopee
+2026-06-29,1590000.00,CHI/Điện nước/Điện,Tiền mặt
+2026-04-05,14000000.00,THU/Thưởng,Mua linh kiện
+2026-05-20,650000.00,CHI/Điện nước/Điện,Mua linh kiện
+2026-03-20,320000.00,CHI/Sức khỏe,Mua linh kiện
+2026-06-17,390000.00,CHI/Điện nước/Nước,Steam
+2026-02-23,1960000.00,CHI/PC,Tiền mặt
+2026-04-16,120000.00,CHI/Mua sắm,Lazada
+2026-03-12,400000.00,CHI/PC,Lazada
+2026-01-21,280000.00,CHI/PC,Grab
+2026-02-13,20000.00,CHI/Mua sắm,Shopee
+2026-01-04,970000.00,CHI/PC,Lazada
+2026-05-07,460000.00,CHI/Đi lại,Lazada
+2026-03-16,1180000.00,CHI/Sức khỏe,Shopee
+2026-03-15,1250000.00,CHI/Đi lại,Tiền mặt
+2026-06-17,440000.00,CHI/Điện nước/Nước,Online
+2026-01-15,18000000.00,THU/Thưởng,
+2026-04-22,1980000.00,CHI/Điện nước/Điện,Shopee
+2026-01-22,300000.00,CHI/Điện nước/Nước,Grab
+2026-03-25,940000.00,CHI/Sức khỏe,Chuyển khoản
+2026-02-01,310000.00,CHI/Đi lại,Tiền mặt
+2026-03-02,1400000.00,CHI/Sức khỏe,Ăn với bạn
+2026-05-12,1950000.00,CHI/Đi lại,Online
+2026-06-15,1360000.00,CHI/Mua sắm,Ăn với bạn
+2026-01-01,550000.00,CHI/Đi lại,Mua linh kiện
+2026-02-03,4000000.00,THU/Lãi tiết kiệm,Shopee
+2026-05-03,1150000.00,CHI/Sức khỏe,
+2026-05-18,210000.00,CHI/Điện nước/Nước,Tiền mặt
+2026-04-21,1730000.00,CHI/PC,Tiền mặt
+2026-03-21,1490000.00,CHI/Ăn uống,Shopee
+2026-03-13,850000.00,CHI/Mua sắm,Steam
+2026-04-28,490000.00,CHI/Mua sắm,Steam
+2026-02-08,110000.00,CHI/Tiền nhà,Ăn với bạn
+2026-03-23,970000.00,CHI/Sức khỏe,Shopee
+2026-04-05,1180000.00,CHI/PC,Ví điện tử
+2026-04-11,460000.00,CHI/Sức khỏe,Online
+2026-01-11,290000.00,CHI/Ăn uống,Ăn với bạn
+2026-01-13,3000000.00,THU/BET88,Lazada
+2026-04-30,13000000.00,THU/Lãi tiết kiệm,Tiền mặt
+2026-04-06,1500000.00,CHI/Điện nước/Điện,Lazada
+2026-05-05,1150000.00,CHI/Ăn uống,Tiền mặt
+2026-03-13,1660000.00,CHI/Điện nước/Nước,Ăn với bạn
+2026-03-12,1560000.00,CHI/Sức khỏe,Mua linh kiện
+2026-05-27,1470000.00,CHI/Giải trí,Mua linh kiện
+2026-02-17,1980000.00,CHI/PC,Online
+2026-04-11,1310000.00,CHI/Điện nước/Nước,Steam
+2026-03-02,370000.00,CHI/Sức khỏe,Tiền mặt
+2026-01-16,2000000.00,THU/BET88,Mua linh kiện
+2026-01-26,100000.00,CHI/PC,Online
+2026-01-25,1060000.00,CHI/Mua sắm,Chuyển khoản
+2026-06-23,1100000.00,CHI/Tiền nhà,Ăn với bạn
+2026-02-16,870000.00,CHI/Đi lại,Thanh toán
+2026-05-12,1520000.00,CHI/Sức khỏe,Online
+2026-06-16,190000.00,CHI/Điện nước/Điện,Online
+2026-05-11,1940000.00,CHI/Đi lại,Chuyển khoản
+2026-05-06,15000000.00,THU/BET88,Tiền mặt
+2026-06-02,1510000.00,CHI/Ăn uống,Chuyển khoản
+2026-05-21,1440000.00,CHI/Đi lại,
+2026-01-28,1090000.00,CHI/Giải trí,Tiền mặt
+2026-02-28,9000000.00,THU/Thu nhập khác,Lazada
+2026-06-15,6000000.00,THU/Thu nhập khác,Shopee
+2026-06-17,590000.00,CHI/Điện nước/Điện,Online
+2026-04-01,1880000.00,CHI/Mua sắm,Chuyển khoản
+2026-06-25,1110000.00,CHI/Ăn uống,Chuyển khoản
+2026-01-03,1600000.00,CHI/PC,Mua linh kiện
+2026-02-07,1320000.00,CHI/Sức khỏe,Chuyển khoản
+2026-02-18,1750000.00,CHI/Giải trí,Ăn với bạn
+2026-03-19,160000.00,CHI/PC,Shopee
+2026-01-31,1250000.00,CHI/Giải trí,Online
+2026-06-02,980000.00,CHI/Mua sắm,Steam
+2026-01-18,12000000.00,THU/Lương,Online
+2026-02-12,11000000.00,THU/Lương,Thanh toán
+2026-03-15,320000.00,CHI/Tiền nhà,Tiền mặt
+2026-05-11,16000000.00,THU/Thưởng,Mua linh kiện
+2026-03-29,1200000.00,CHI/PC,Online
+2026-05-03,11000000.00,THU/Lương,Lazada
+2026-01-03,1060000.00,CHI/Tiền nhà,Lazada
+2026-05-11,550000.00,CHI/Tiền nhà,Thanh toán
+2026-02-02,1720000.00,CHI/Điện nước/Điện,Lazada
+2026-01-10,10000000.00,THU/Thu nhập khác,Chuyển khoản
+2026-03-06,18000000.00,THU/Lương,Lazada
+2026-01-07,1230000.00,CHI/Ăn uống,
+2026-03-10,9000000.00,THU/Lương,Tiền mặt
+2026-02-25,80000.00,CHI/Giải trí,Steam
+2026-01-18,950000.00,CHI/Giải trí,
+2026-02-12,290000.00,CHI/Điện nước/Nước,Online
+2026-02-05,1860000.00,CHI/Sức khỏe,Steam
+2026-06-22,1200000.00,CHI/Đi lại,
+2026-02-25,1630000.00,CHI/Sức khỏe,Grab
+2026-04-19,9000000.00,THU/Thu nhập khác,Shopee
+2026-04-11,290000.00,CHI/PC,Chuyển khoản
+2026-05-31,330000.00,CHI/Mua sắm,Ăn với bạn
+2026-02-18,1740000.00,CHI/Sức khỏe,Ví điện tử
+2026-05-10,17000000.00,THU/BET88,Grab
+2026-06-29,12000000.00,THU/Lãi tiết kiệm,Grab
+2026-01-19,680000.00,CHI/Tiền nhà,Ăn với bạn
+2026-02-11,1640000.00,CHI/Điện nước/Nước,Thanh toán
+2026-02-11,1430000.00,CHI/Giải trí,Lazada
+2026-05-14,1660000.00,CHI/Đi lại,

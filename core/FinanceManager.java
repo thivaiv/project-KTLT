@@ -12,11 +12,11 @@ import models.CategoryNode;
 import models.Transaction;
 
 public class FinanceManager {
-    public static final String DEFAULT_DATA_FILE = "data.csv";
+    public static final String DEFAULT_DATA_FILE = "data/data.csv";
     public static final String SEPARATOR = "---TREE---";
 
     private FinanceTree tree;
-    private String dataFile;
+    public String dataFile;
     private final List<String> loadWarnings = new ArrayList<>();
 
     public List<String> getLoadWarnings() {

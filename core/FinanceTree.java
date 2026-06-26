@@ -295,14 +295,14 @@ public class FinanceTree {
         }
         if (txnCount > 0) {
             if (budget > 0){
-                info = String.format("%s" +DOLLAR+ "[%,.0f]" +RESET +BG_RED+ "|%,.0f|" +RESET+ " " +YELLOW+ "[%d GD]" +RESET, isLeafMarker,total,budget,txnCount);
+                info = String.format("%s" +DOLLAR+ "[%,.0f]" +RESET + BG_RED + "|%,.0f|" +RESET+ " " +YELLOW+ "[%d GD]" +RESET, isLeafMarker,total,budget,txnCount);
             }
             else {
                 info = String.format("%s" +DOLLAR+ "[%,.0f] " +RESET +YELLOW+ "[%d GD]" +RESET, isLeafMarker, total, txnCount);
             }
         } else if (total > 0) {
             if (budget > 0){
-                info = String.format(DOLLAR+ "[%,.0f] " +RESET +BG_RED+ "|%,.0f|" +RESET, (total>0)?total:0,budget);
+                info = String.format(DOLLAR+ "[%,.0f] " +RESET + BG_RED + "|%,.0f|" +RESET, (total>0)?total:0,budget);
             }
             else {
                 info = String.format(DOLLAR+ "[%,.0f]" +RESET, (total>0)?total:0);

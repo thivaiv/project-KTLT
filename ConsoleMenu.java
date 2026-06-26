@@ -442,7 +442,7 @@ public class ConsoleMenu {
         if (confirm.equals("y") || confirm.equals("yes")) {
             System.out.print("  Nhập tên file (để trống sẽ lưu là 'baocao.txt'): ");
             String txtFile = readLine().trim();
-            if (txtFile.isEmpty()) txtFile = "baocao.txt";
+            if (txtFile.isEmpty()) txtFile = "data/baocao.txt";
 
             if (manager.exportDetailedReportToTxt(txtFile)) {
                 System.out.println("  [OK] Đã xuất báo cáo dạng bảng thành công ra file: " + txtFile);
@@ -473,7 +473,8 @@ public class ConsoleMenu {
                 case "1":
                     System.out.print("  Nhập tên file để lưu (để trống sẽ dùng mặc định 'data.csv'): ");
                     String saveFile = readLine().trim();
-                    boolean saveSuccess = manager.saveData(saveFile);
+                    if (saveFile == ""){saveFile = manager.dataFile;}
+                    boolean saveSuccess = manager.saveData("data/" +saveFile);
                     if (saveSuccess) {
                         System.out.println("  [OK] Đã lưu trữ dữ liệu thành công.");
                     } else {
@@ -485,7 +486,8 @@ public class ConsoleMenu {
                 case "2":
                     System.out.print("  Nhập tên file để tải (để trống sẽ dùng mặc định 'data.csv'): ");
                     String loadFile = readLine().trim();
-                    boolean loadSuccess = manager.loadData(loadFile);
+                    if (loadFile == ""){loadFile = "data.csv";}
+                    boolean loadSuccess = manager.loadData("data/" + loadFile);
                     for (String warning : manager.getLoadWarnings()) {
                         System.out.println("  [CẢNH BÁO] " + warning);
                     }
@@ -494,6 +496,7 @@ public class ConsoleMenu {
                     } else {
                         System.out.println("  [LỖI] Tải dữ liệu thất bại hoặc file không có sẵn.");
                     }
+                    manager.dataFile = loadFile;
                     waitEnter();
                     break;
                 case "4.3":
